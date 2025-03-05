@@ -1,0 +1,8 @@
+<robot name="wxai">
+  <disable_collisions link1="base_link" link2="link_1" reason="Adjacent"/>
+  <disable_collisions link1="link_6" link2="carriage_right" reason="Adjacent"/>
+  <disable_collisions link1="link_6" link2="carriage_left" reason="Adjacent"/>
+  <disable_collisions link1="carriage_right" link2="gripper_right" reason="Fixed"/>
+  <disable_collisions link1="carriage_left" link2="gripper_left" reason="Fixed"/>
+  <disable_collisions link1="gripper_right" link2="gripper_left" reason="ParallelMotion"/>
+</robot>

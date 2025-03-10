@@ -12,7 +12,7 @@
         <mesh filename="meshes/wxai/base_link.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -34,7 +34,7 @@
         <mesh filename="meshes/wxai/link_1.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -63,7 +63,7 @@
         <mesh filename="meshes/wxai/link_2.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -92,7 +92,7 @@
         <mesh filename="meshes/wxai/link_3.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -121,7 +121,7 @@
         <mesh filename="meshes/wxai/link_4.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -150,7 +150,7 @@
         <mesh filename="meshes/wxai/link_5.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -179,7 +179,7 @@
         <mesh filename="meshes/wxai/link_6.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -196,6 +196,61 @@
     <axis xyz="1 0 0"/>
     <limit effort="7.0" lower="-3.141592653589793" upper="3.141592653589793" velocity="3.141592653589793"/>
   </joint>
+  <joint name="pen" type="fixed">
+    <origin rpy="0 -0.78539816339 0" xyz="0.142 0 0"/>
+    <parent link="link_6"/>
+    <child link="pen_link"/>
+    <axis xyz="1 0 0"/>
+  </joint>
+  <link name="pen_link">
+    <inertial>
+      <mass value="0.001"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.08" radius="0.01"/>
+      </geometry>
+      <material name="pen_material">
+        <color rgba="0.1 0.1 0.1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.08" radius="0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="pen_tip_link">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.000001" ixy="0" ixz="0" iyy="0.000001" iyz="0" izz="0.000001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="pen_tip_material">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="pen_tip_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 -0.04"/>
+    <parent link="pen_link"/>
+    <child link="pen_tip_link"/>
+  </joint>
   <link name="carriage_right">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.00889602 0.00403514 0.00457901"/>
@@ -208,7 +263,7 @@
         <mesh filename="meshes/wxai/carriage_right.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -237,7 +292,7 @@
         <mesh filename="meshes/wxai/carriage_left.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -266,7 +321,7 @@
         <mesh filename="meshes/wxai/camera_mount_d405.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -287,7 +342,14 @@
     <parent link="camera_mount_d405"/>
     <child link="camera_bottom_screw_frame"/>
   </joint>
-  <link name="camera_bottom_screw_frame"/>
+  <link name="camera_bottom_screw_frame">
+    <!-- Empty link but must include an inertial element -->
+    <inertial>
+      <mass value="0.001"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.0000001" ixy="0" ixz="0" iyy="0.0000001" iyz="0" izz="0.0000001"/>
+    </inertial>
+  </link>
   <joint name="camera_link_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0.01085 0.009 0.021"/>
     <parent link="camera_bottom_screw_frame"/>
@@ -327,7 +389,7 @@
         <mesh filename="meshes/wxai/gripper_left.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -355,7 +417,7 @@
         <mesh filename="meshes/wxai/gripper_right.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -371,16 +433,4 @@
     <child link="gripper_right"/>
     <axis xyz="0 0 0"/>
   </joint>
-  <joint name="ee_gripper" type="fixed">
-    <origin rpy="0 0 0" xyz="0.142 0 0"/>
-    <parent link="link_6"/>
-    <child link="ee_gripper_link"/>
-    <axis xyz="1 0 0"/>
-  </joint>
-  <link name="ee_gripper_link">
-    <inertial>
-      <mass value="0.001"/>
-      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
-    </inertial>
-  </link>
 </robot>

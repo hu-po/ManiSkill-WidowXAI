@@ -8,4 +8,7 @@
   <disable_collisions link1="carriage_right" link2="gripper_right" reason="Fixed"/>
   <disable_collisions link1="carriage_left" link2="gripper_left" reason="Fixed"/>
   <disable_collisions link1="gripper_right" link2="gripper_left" reason="ParallelMotion"/>
+  <disable_collisions link1="gripper_right" link2="pen_link" reason="Adjacent"/>
+  <disable_collisions link1="gripper_left" link2="pen_link" reason="Adjacent"/>
+  <disable_collisions link1="pen_link" link2="pen_tip_link" reason="Adjacent"/>
 </robot>

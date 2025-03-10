@@ -12,7 +12,7 @@
         <mesh filename="meshes/wxai/base_link.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -34,7 +34,7 @@
         <mesh filename="meshes/wxai/link_1.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -63,7 +63,7 @@
         <mesh filename="meshes/wxai/link_2.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -92,7 +92,7 @@
         <mesh filename="meshes/wxai/link_3.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -121,7 +121,7 @@
         <mesh filename="meshes/wxai/link_4.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -150,7 +150,7 @@
         <mesh filename="meshes/wxai/link_5.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -179,7 +179,7 @@
         <mesh filename="meshes/wxai/link_6.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -208,7 +208,7 @@
         <mesh filename="meshes/wxai/carriage_right.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -237,7 +237,7 @@
         <mesh filename="meshes/wxai/carriage_left.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -266,7 +266,7 @@
         <mesh filename="meshes/wxai/camera_mount_d405.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -327,7 +327,7 @@
         <mesh filename="meshes/wxai/gripper_left.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -355,7 +355,7 @@
         <mesh filename="meshes/wxai/gripper_right.stl"/>
       </geometry>
       <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>

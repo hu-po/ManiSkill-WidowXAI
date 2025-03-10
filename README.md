@@ -6,6 +6,10 @@ the official URDF can be found here: https://github.com/TrossenRobotics/trossen_
 
 this repo is based off of a similar ManiSkill repo for the WidowX 250S robot: https://github.com/haosulab/ManiSkill-WidowX250S
 
+there are two versions of the URDF:
+
+- `wxai.urdf` is the original unmodified URDF with a parallel jaw gripper
+- `wxai-pen.urdf` has a cylindrical pen attached via a fixed joint to the gripper
 
 ## Changes Made:
 
